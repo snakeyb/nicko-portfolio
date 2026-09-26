@@ -1,0 +1,22 @@
+[
+  {
+    "organisation": "Pimberly",
+    "role": "Presales Consultant",
+    "summary": "Customer discovery, demonstrations, custom demo design and MCP integration."
+  },
+  {
+    "organisation": "PropertyPipeline",
+    "role": "Co-founder / Technical Architect",
+    "summary": "Architecture and development of a SaaS CRM for property investors."
+  },
+  {
+    "organisation": "Wolf & Sword",
+    "role": "Founder / Solutions Architect",
+    "summary": "Custom development, integrations and technical consulting."
+  },
+  {
+    "organisation": "Enterprise communications consulting",
+    "role": "Lead Engineer / Solutions Architect",
+    "summary": "Enterprise communications design, migration and delivery."
+  }
+]
