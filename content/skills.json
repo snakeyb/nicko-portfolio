@@ -1,0 +1,45 @@
+[
+  {
+    "category": "Enterprise AI & Integration",
+    "items": [
+      "MCP architecture",
+      "REST APIs",
+      "Agentic AI solution design",
+      "AI-assisted development"
+    ]
+  },
+  {
+    "category": "Customer-facing engineering",
+    "items": [
+      "Technical discovery",
+      "Solution architecture",
+      "Custom demonstrations",
+      "Enterprise delivery"
+    ]
+  },
+  {
+    "category": "Product & infrastructure",
+    "items": [
+      "SaaS architecture",
+      "Multi-tenant systems",
+      "Integration design",
+      "Operational troubleshooting"
+    ]
+  },
+  {
+    "category": "Communications",
+    "items": [
+      "SIP",
+      "Session Border Controllers",
+      "Microsoft Teams"
+    ]
+  },
+  {
+    "category": "Programming",
+    "items": [
+      "JavaScript",
+      "TypeScript (learning)",
+      "Python (basic)"
+    ]
+  }
+]
