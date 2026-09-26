@@ -11,18 +11,28 @@ Static Astro + Tailwind portfolio for customer-facing engineering and applied AI
 
 The Pimberly and Fabric Finder stories should be reviewed for employer/client disclosure before promotion of a public deployment. Current copy avoids internal performance figures, proprietary code and unapproved client specifics. In particular, the site describes Nick's architectural and AI-assisted development contribution without claiming to have personally written every line of code.
 
-## Develop
+## Publish with Cloudflare Pages
+
+The site currently lives in GitHub; there is no local setup required to publish it. In the Cloudflare dashboard, create a Pages project, connect this GitHub repository and set:
+
+- Production branch: `main`
+- Build command: `npm run build`
+- Build output directory: `dist`
+
+Cloudflare installs the dependencies and runs the build command on its own servers. After the initial connection, pushing changes to `main` triggers a new build. No adapter or runtime environment variables are required for this static site. A pull request can also receive a preview deployment.
+
+## Optional local preview
+
+These commands are only for someone who wants to work on or preview the site on their own computer (or in a GitHub Codespace). They require Node.js and a checkout of the repository:
 
 ```bash
+git clone https://github.com/snakeyb/nicko-portfolio.git
+cd nicko-portfolio
 npm ci
 npm run dev
 ```
 
-Run `npm run check` and `npm run build` before publishing. The generated site is in `dist/`.
-
-## Cloudflare Pages
-
-Connect this repository as a Pages project with production branch `main`, build command `npm run build` and output directory `dist`. No adapter or runtime environment variables are required for this static site. Cloudflare Pages can generate preview deployments for pull requests.
+Open the local URL printed by Astro. `npm run check` and `npm run build` are optional local validation commands; the production build runs automatically in Cloudflare Pages once connected.
 
 ## Editing
 
