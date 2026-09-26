@@ -1,18 +1,29 @@
-# Nick O - Engineering Portfolio
+# Nick Osborn - engineering portfolio
 
-Public portfolio for Nick Osborn: enterprise solutions architecture, customer-facing engineering, SaaS, MCP and applied AI.
+Static Astro + Tailwind portfolio for customer-facing engineering and applied AI roles. GitHub is the source of truth.
 
-## Structure
-- `content/projects/`: Markdown case studies with frontmatter
-- `content/skills.json`: structured skills
-- `content/experience.json`: career experience
-- `REPLIT_BRIEF.md`: website implementation brief
+## Structure and design
 
-## Planned stack
-React, TypeScript, Vite, Tailwind CSS; static build with GitHub-connected deployment through Cloudflare Pages or Vercel. No backend or CMS required.
+- **Home:** direct positioning, four selected projects, approach, experience, capabilities and GitHub contact.
+- **Case studies:** one page per project, following problem, contribution, approach and result. The lead story is the Pimberly MCP integration.
+- **Design:** restrained dark navy, soft mint accent, large editorial typography, thin rules and quiet hover states. Responsive, keyboard accessible and intentionally light on JavaScript.
+- **Content:** project Markdown with frontmatter in `content/projects/`; experience and skills in JSON. Project cards and routes are generated from the Markdown files.
 
-## Editorial safeguards
-Project content is a draft. Review employer and client information before public deployment. Never publish proprietary code, secrets, customer data or unapproved internal metrics. Distinguish architectural ownership and AI-assisted implementation from personally authored code.
+The Pimberly and Fabric Finder stories should be reviewed for employer/client disclosure before promotion of a public deployment. Current copy avoids internal performance figures, proprietary code and unapproved client specifics. In particular, the site describes Nick's architectural and AI-assisted development contribution without claiming to have personally written every line of code.
 
-## Next step
-Import this repository into Replit and ask it to implement `REPLIT_BRIEF.md`. Review the content files before deploying the website.
+## Develop
+
+```bash
+npm ci
+npm run dev
+```
+
+Run `npm run check` and `npm run build` before publishing. The generated site is in `dist/`.
+
+## Cloudflare Pages
+
+Connect this repository as a Pages project with production branch `main`, build command `npm run build` and output directory `dist`. No adapter or runtime environment variables are required for this static site. Cloudflare Pages can generate preview deployments for pull requests.
+
+## Editing
+
+Edit Markdown frontmatter and copy in `content/projects/`, or the two JSON files for skills and experience. `status` frontmatter is an editorial flag, not a publishing switch. All four stories currently appear on the site. The contact link points to the verified `snakeyb` GitHub profile; add a preferred public email or LinkedIn URL when available.

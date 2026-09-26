@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0c1720;
+  --color-panel: #12232d;
+  --color-line: #2d444d;
+  --color-muted: #a9b9ba;
+  --color-accent: #9de3c5;
+  --color-cream: #f2f0e8;
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+}
+
+:root { color-scheme: dark; scroll-behavior: smooth; }
+body { margin: 0; background: var(--color-ink); color: var(--color-cream); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+::selection { background: #9de3c5; color: #0c1720; }
+a { text-underline-offset: .25em; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 5px; }
+.wrap { width: min(100% - 3rem, 1180px); margin-inline: auto; }
+.eyebrow { color: var(--color-accent); font-size: .71rem; font-weight: 700; letter-spacing: .17em; text-transform: uppercase; }
+.hairline { border-color: var(--color-line); }
+.display { font-weight: 600; letter-spacing: -.065em; line-height: .99; }
+.prose h2 { margin: 3rem 0 .8rem; font-size: clamp(1.4rem, 2.5vw, 1.9rem); font-weight: 600; letter-spacing: -.035em; }
+.prose h2:first-child { margin-top: 0; }
+.prose p, .prose li { color: #c1cdca; line-height: 1.8; font-size: 1.04rem; }
+.prose p { margin: 0 0 1.25rem; }
+.prose ul { list-style: disc; padding-left: 1.35rem; margin-bottom: 1.4rem; }
+.prose strong { color: var(--color-cream); }
+@media (prefers-reduced-motion: reduce) { :root { scroll-behavior: auto; } }

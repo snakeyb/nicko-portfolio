@@ -6,15 +6,17 @@ featured: true
 order: 4
 status: draft
 technologies: [SIP, SBC, Microsoft Teams, Skype for Business]
+summary: Leading migrations and integrations where networks, legacy telephony and live operations all have to meet.
+signal: Customer-facing design through go-live
 ---
-## Challenge
-Migrate enterprise communications while maintaining reliability across networks, security boundaries and legacy platforms.
+## The problem
+Enterprise communications migrations cross several boundaries at once: established telephony, identity, networking, security, user behaviour and operational support. A working design on paper still has to survive the realities of a live environment.
 
-## Contribution
-Led technical discovery, solution design, deployment, troubleshooting and go-live across enterprise engagements.
+## My contribution
+I led discovery, presales, solution design, deployment, troubleshooting and go-live support across consulting engagements. The role required translating between customer stakeholders and specialist infrastructure teams, then staying accountable when a migration reached production.
 
-## Approach
-SBC design, telephony integration, security coordination and phased migration.
+## The approach
+I used phased migrations, Session Border Controller design, telephony integration and close coordination with network and security teams. When expected call paths or sign-in flows failed, the work moved from architecture to hands-on diagnosis across system boundaries.
 
-## Outcome
-Production communications deployments and operational handovers. Review customer references before publication.
+## The result
+These engagements delivered production communications services and operational handovers. They formed the foundation of my approach to customer-facing engineering: understand the whole system, communicate clearly across teams and own the path through go-live.

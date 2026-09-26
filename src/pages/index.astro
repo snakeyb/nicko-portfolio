@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { projects } from '../lib/projects';
+import skills from '../../content/skills.json';
+import experience from '../../content/experience.json';
+---
+<BaseLayout title="Customer-facing engineer & solutions architect" description="Nick Osborn's engineering portfolio: enterprise integration, applied AI, SaaS products and customer-facing delivery.">
+  <section class="relative overflow-hidden border-b border-line">
+    <div class="pointer-events-none absolute inset-0 opacity-30" aria-hidden="true" style="background: radial-gradient(circle at 78% 35%, #296958 0, transparent 33%), linear-gradient(90deg, transparent 49.9%, #2d444d 50%, transparent 50.1%); background-size: auto, 12% 100%;"></div>
+    <div class="wrap relative grid gap-14 py-24 md:grid-cols-[1.25fr_.75fr] md:items-end md:py-36">
+      <div>
+        <p class="eyebrow mb-8 flex items-center gap-3"><span class="h-2 w-2 rounded-full bg-accent"></span> Customer-facing engineering / Applied AI</p>
+        <h1 class="display max-w-4xl text-[clamp(3.9rem,8vw,8.5rem)]">Make the<br /><span class="text-accent">complex</span><br />work.</h1>
+        <p class="mt-9 max-w-2xl text-lg leading-relaxed text-[#c4d1cc] md:text-xl">I’m Nick Osborn. I turn messy customer needs into working systems - from enterprise integrations and AI-assisted workflows to SaaS products and critical communications.</p>
+        <div class="mt-10 flex flex-wrap gap-4">
+          <a href="#work" class="inline-flex items-center gap-7 bg-accent px-6 py-3.5 text-sm font-semibold text-ink transition-colors hover:bg-white">Explore the work <span aria-hidden="true">↘</span></a>
+          <a href="#about" class="inline-flex items-center border border-line px-6 py-3.5 text-sm font-medium transition-colors hover:border-accent hover:text-accent">How I work</a>
+        </div>
+      </div>
+      <div class="max-w-md border-l border-accent/70 pl-6 md:mb-3 md:ml-auto">
+        <p class="eyebrow mb-5">At the intersection</p>
+        <p class="text-xl leading-snug tracking-tight md:text-2xl">Discovery <span class="text-accent">→</span> architecture <span class="text-accent">→</span> delivery</p>
+        <p class="mt-5 leading-relaxed text-muted">I work close to the people and the problem, then build a path from a useful prototype to something teams can actually use.</p>
+      </div>
+    </div>
+    <div class="wrap relative flex flex-wrap justify-between gap-3 border-t border-line py-5 text-xs uppercase tracking-[.16em] text-muted"><span>Sheffield, UK</span><span>Enterprise systems / Product engineering / AI</span><span>Scroll to explore ↓</span></div>
+  </section>
+
+  <section id="work" class="wrap scroll-mt-12 py-24 md:py-32">
+    <div class="mb-12 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+      <div><p class="eyebrow mb-5">01 / Selected work</p><h2 class="display text-5xl md:text-7xl">Built around<br />real problems.</h2></div>
+      <p class="max-w-sm leading-relaxed text-muted">Four examples across AI integration, independent product building and enterprise delivery. Each project shows the problem, my contribution and the approach.</p>
+    </div>
+    <div class="grid gap-4 md:grid-cols-2">{projects.filter(project => project.frontmatter.featured).map((project, index) => <ProjectCard slug={project.slug} data={project.frontmatter} index={index} />)}</div>
+  </section>
+
+  <section id="about" class="scroll-mt-12 border-y border-line bg-[#10212a]">
+    <div class="wrap grid gap-12 py-24 md:grid-cols-[.7fr_1.3fr] md:gap-20 md:py-32">
+      <div><p class="eyebrow mb-5">02 / How I work</p><h2 class="display text-5xl md:text-6xl">Engineer.<br /><span class="text-accent">Translator.</span><br />Builder.</h2></div>
+      <div class="space-y-8">
+        <p class="text-2xl leading-snug tracking-tight md:text-3xl">I’m most useful when the problem is only partly defined, the systems are complicated and the solution has to work for real people.</p>
+        <p class="max-w-2xl leading-relaxed text-muted">My work spans presales discovery, hands-on solution architecture, integrations, AI-assisted development and operational delivery. I start with the workflow and constraints, choose the smallest useful building blocks, then test the result with the people who will use it.</p>
+        <p class="max-w-2xl leading-relaxed text-muted">I use coding agents as part of the development process. My contribution includes framing the problem, designing the system and interfaces, directing implementation, evaluating results and resolving the gaps between a demo and a usable solution.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap grid gap-14 py-24 md:grid-cols-[.7fr_1.3fr] md:gap-20 md:py-32">
+    <div><p class="eyebrow mb-5">03 / Experience</p><h2 class="display text-5xl md:text-6xl">Across the<br />whole stack.</h2><p class="mt-8 max-w-xs leading-relaxed text-muted">A career across customer-facing engineering, founding and building products, and delivering enterprise systems.</p></div>
+    <div class="border-t border-line">{experience.map(item => <div class="grid gap-2 border-b border-line py-6 sm:grid-cols-[.55fr_1fr] sm:gap-6"><h3 class="text-lg font-semibold">{item.organisation}</h3><div><p class="text-accent">{item.role}</p><p class="mt-2 leading-relaxed text-muted">{item.summary}</p></div></div>)}</div>
+  </section>
+
+  <section class="border-y border-line bg-[#10212a]"><div class="wrap py-24 md:py-28"><p class="eyebrow mb-5">04 / Capabilities</p><h2 class="display mb-12 text-5xl md:text-6xl">Tools for the job.</h2><div class="grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">{skills.map(group => <div class="bg-[#10212a] p-7 md:p-8"><h3 class="mb-6 text-lg font-semibold">{group.category}</h3><ul class="space-y-2 text-sm leading-relaxed text-muted">{group.items.map(item => <li>{item}</li>)}</ul></div>)}</div></div></section>
+
+  <section class="wrap py-24 md:py-32"><p class="eyebrow mb-6">The next conversation</p><div class="flex flex-col items-start justify-between gap-10 md:flex-row md:items-end"><h2 class="display max-w-3xl text-5xl md:text-7xl">Have a hard<br />problem to solve?</h2><a href="https://github.com/snakeyb" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-8 border-b border-accent pb-3 text-lg text-accent hover:text-white">Find me on GitHub <span aria-hidden="true">↗</span></a></div></section>
+</BaseLayout>

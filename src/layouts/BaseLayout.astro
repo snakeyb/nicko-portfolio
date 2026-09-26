@@ -1,0 +1,36 @@
+---
+import '../styles/global.css';
+interface Props { title: string; description: string; }
+const { title, description } = Astro.props;
+---
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0c1720" />
+    <meta name="description" content={description} />
+    <title>{title} | Nick Osborn</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:bg-accent focus:px-4 focus:py-2 focus:text-ink">Skip to content</a>
+    <header class="relative z-10 border-b border-line">
+      <div class="wrap flex min-h-20 items-center justify-between gap-4">
+        <a href="/" class="flex items-center gap-3 text-sm font-bold tracking-tight" aria-label="Nick Osborn, home"><span class="grid h-9 w-9 place-items-center border border-accent text-accent">N<span class="sr-only">ick Osborn</span></span><span>Nick Osborn<span class="hidden font-normal text-muted sm:inline"> / Engineering portfolio</span></span></a>
+        <nav aria-label="Main navigation" class="flex items-center gap-4 text-xs font-medium sm:gap-8 sm:text-sm">
+          <a href="/#work" class="text-muted transition-colors hover:text-accent">Work</a>
+          <a href="/#about" class="text-muted transition-colors hover:text-accent">About</a>
+          <a href="https://github.com/snakeyb" target="_blank" rel="noopener noreferrer" class="border border-line px-3 py-2 transition-colors hover:border-accent hover:text-accent sm:px-4">GitHub ↗</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main"><slot /></main>
+    <footer class="border-t border-line py-10">
+      <div class="wrap flex flex-col gap-5 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
+        <p>Nick Osborn <span class="mx-2 text-line">/</span> Engineering, from discovery to delivery.</p>
+        <div class="flex gap-6"><a href="/#work" class="hover:text-accent">Selected work</a><a href="https://github.com/snakeyb" target="_blank" rel="noopener noreferrer" class="hover:text-accent">GitHub ↗</a><a href="#main" class="hover:text-accent">Back to top ↑</a></div>
+      </div>
+    </footer>
+  </body>
+</html>
