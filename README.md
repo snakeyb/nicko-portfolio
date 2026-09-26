@@ -4,7 +4,7 @@ Static Astro + Tailwind portfolio for customer-facing engineering and applied AI
 
 ## Structure and design
 
-- **Home:** direct positioning, four selected projects, approach, experience, capabilities and GitHub contact.
+- **Home:** direct positioning, four selected projects, approach, experience, capabilities and a closing statement.
 - **Case studies:** one page per project, following problem, contribution, approach and result. The lead story is the Pimberly MCP integration.
 - **Design:** restrained dark navy, soft mint accent, large editorial typography, thin rules and quiet hover states. Responsive, keyboard accessible and intentionally light on JavaScript.
 - **Content:** project Markdown with frontmatter in `content/projects/`; experience and skills in JSON. Project cards and routes are generated from the Markdown files.
@@ -36,4 +36,4 @@ Open the local URL printed by Astro. `npm run check` and `npm run build` are opt
 
 ## Editing
 
-Edit Markdown frontmatter and copy in `content/projects/`, or the two JSON files for skills and experience. `status` frontmatter is an editorial flag, not a publishing switch. All four stories currently appear on the site. The contact link points to the verified `snakeyb` GitHub profile; add a preferred public email or LinkedIn URL when available.
+Edit Markdown frontmatter and copy in `content/projects/`, or the two JSON files for skills and experience. `status` frontmatter is an editorial flag, not a publishing switch. All four stories currently appear on the site. The public site does not link to a personal GitHub profile.
