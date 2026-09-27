@@ -19,4 +19,4 @@ I identified the repeatable work, explored the API and designed an MCP interface
 The design uses small, purpose-specific tools for distinct operations rather than a single broad tool that hides too many decisions. API responses are filtered where needed so the useful data can be handled efficiently. This keeps the workflow inspectable and gives the operator control over each step.
 
 ## The result
-The integration is used in presales to prepare more tailored demonstrations, and the development team has taken the design forward as a proof of concept. The project illustrates how I work: find friction in a real workflow, build a narrow interface around it, and validate it with the people doing the work.
+I took the integration from a presales workflow problem to a working prototype in roughly two weeks. It is used by the presales team and saves approximately 2–3 working days of preparation for a custom demo. Engineering adopted the design as a proof of concept for further development.

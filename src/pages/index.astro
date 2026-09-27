@@ -4,6 +4,8 @@ import ProjectCard from '../components/ProjectCard.astro';
 import { projects } from '../lib/projects';
 import skills from '../../content/skills.json';
 import experience from '../../content/experience.json';
+const featured = projects.filter(project => project.frontmatter.featured);
+const more = projects.filter(project => !project.frontmatter.featured);
 ---
 <BaseLayout title="Customer-facing engineer & solutions architect" description="Nick Osborn's engineering portfolio: enterprise integration, applied AI, SaaS products and customer-facing delivery.">
   <section class="relative overflow-hidden border-b border-line">
@@ -30,9 +32,10 @@ import experience from '../../content/experience.json';
   <section id="work" class="wrap scroll-mt-12 py-24 md:py-32">
     <div class="mb-12 flex flex-col justify-between gap-5 md:flex-row md:items-end">
       <div><p class="eyebrow mb-5">01 / Selected work</p><h2 class="display text-5xl md:text-7xl">Built around<br />real problems.</h2></div>
-      <p class="max-w-sm leading-relaxed text-muted">Four examples across AI integration, independent product building and enterprise delivery. Each project shows the problem, my contribution and the approach.</p>
+      <p class="max-w-sm leading-relaxed text-muted">Five examples across AI integration, customer data, independent product building and enterprise delivery. Each project shows the problem, my contribution and the approach.</p>
     </div>
-    <div class="grid gap-4 md:grid-cols-2">{projects.filter(project => project.frontmatter.featured).map((project, index) => <ProjectCard slug={project.slug} data={project.frontmatter} index={index} />)}</div>
+    <div class="grid gap-4 md:grid-cols-2">{featured.map((project, index) => <ProjectCard slug={project.slug} data={project.frontmatter} index={index} wide={index === featured.length - 1 && featured.length % 2 === 1} />)}</div>
+    {more.length > 0 && <div class="mt-12 border-t border-line pt-8"><p class="eyebrow mb-5">More work</p>{more.map(project => <a href={`/work/${project.slug}/`} class="group flex flex-col justify-between gap-3 border-b border-line py-5 transition-colors hover:text-accent sm:flex-row sm:items-center"><span class="text-xl font-semibold tracking-tight">{project.frontmatter.title}</span><span class="text-sm text-muted">{project.frontmatter.signal} <span aria-hidden="true" class="ml-3 text-accent">↗</span></span></a>)}</div>}
   </section>
 
   <section id="about" class="scroll-mt-12 border-y border-line bg-[#10212a]">
@@ -41,6 +44,8 @@ import experience from '../../content/experience.json';
       <div class="space-y-8">
         <p class="text-2xl leading-snug tracking-tight md:text-3xl">I’m most useful when the problem is only partly defined, the systems are complicated and the solution has to work for real people.</p>
         <p class="max-w-2xl leading-relaxed text-muted">My work spans presales discovery, hands-on solution architecture, integrations, AI-assisted development and operational delivery. I start with the workflow and constraints, choose the smallest useful building blocks, then test the result with the people who will use it.</p>
+        <p class="max-w-2xl leading-relaxed text-muted">In discovery, I work through the customer's current process with the people who own each step. I use their data and prior conversations, prepare questions around the gaps, and map the workflow before deciding what to build. AI can accelerate transcript and data analysis, but I keep the process understanding and decisions with me.</p>
+        <p class="max-w-2xl leading-relaxed text-muted">That also means establishing boundaries early. In one portal evaluation I mapped detailed access and asset requirements against the product's actual capabilities, explored an alternative already used by the customer's business, and made the gaps clear while there was still room to choose a workable route. I bring the same discipline to technical and non-functional requirements responses.</p>
         <p class="max-w-2xl leading-relaxed text-muted">I use coding agents as part of the development process. My contribution includes framing the problem, designing the system and interfaces, directing implementation, evaluating results and resolving the gaps between a demo and a usable solution.</p>
       </div>
     </div>
@@ -53,5 +58,5 @@ import experience from '../../content/experience.json';
 
   <section class="border-y border-line bg-[#10212a]"><div class="wrap py-24 md:py-28"><p class="eyebrow mb-5">04 / Capabilities</p><h2 class="display mb-12 text-5xl md:text-6xl">Tools for the job.</h2><div class="grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">{skills.map(group => <div class="bg-[#10212a] p-7 md:p-8"><h3 class="mb-6 text-lg font-semibold">{group.category}</h3><ul class="space-y-2 text-sm leading-relaxed text-muted">{group.items.map(item => <li>{item}</li>)}</ul></div>)}</div></div></section>
 
-  <section class="wrap py-24 md:py-32"><p class="eyebrow mb-6">The work continues</p><div class="flex flex-col items-start justify-between gap-10 md:flex-row md:items-end"><h2 class="display max-w-3xl text-5xl md:text-7xl">From a real problem<br />to a working system.</h2><p class="max-w-xs border-l border-accent pl-5 leading-relaxed text-muted">Discovery, architecture and delivery - brought together around the people who will use it.</p></div></section>
+  <section id="contact" class="wrap scroll-mt-12 py-24 md:py-32"><p class="eyebrow mb-6">The next conversation</p><div class="flex flex-col items-start justify-between gap-10 md:flex-row md:items-end"><h2 class="display max-w-3xl text-5xl md:text-7xl">From a real problem<br />to a working system.</h2><div class="max-w-xs border-l border-accent pl-5"><p class="mb-5 leading-relaxed text-muted">If this is the sort of work you need, I'd be glad to talk.</p><div class="flex flex-col items-start gap-3"><a href="https://www.linkedin.com/in/niosborn/" target="_blank" rel="noopener noreferrer" class="border-b border-accent pb-1 text-accent hover:text-white">Connect on LinkedIn ↗</a><a href="mailto:nick.osborn@hotmail.co.uk" class="border-b border-line pb-1 text-[#c4d1cc] hover:border-accent hover:text-accent">Email me ↗</a></div></div></div></section>
 </BaseLayout>

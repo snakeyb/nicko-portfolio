@@ -4,12 +4,12 @@ Static Astro + Tailwind portfolio for customer-facing engineering and applied AI
 
 ## Structure and design
 
-- **Home:** direct positioning, four selected projects, approach, experience, capabilities and a closing statement.
-- **Case studies:** one page per project, following problem, contribution, approach and result. The lead story is the Pimberly MCP integration.
+- **Home:** direct positioning, five featured projects, more work, approach, experience, capabilities and contact links.
+- **Case studies:** one page per project, following problem, contribution, approach and result. The lead story is the Pimberly MCP integration. The scheduled price-launch design is clearly marked as not yet delivered.
 - **Design:** restrained dark navy, soft mint accent, large editorial typography, thin rules and quiet hover states. Responsive, keyboard accessible and intentionally light on JavaScript.
 - **Content:** project Markdown with frontmatter in `content/projects/`; experience and skills in JSON. Project cards and routes are generated from the Markdown files.
 
-The Pimberly and Fabric Finder stories should be reviewed for employer/client disclosure before promotion of a public deployment. Current copy avoids internal performance figures, proprietary code and unapproved client specifics. In particular, the site describes Nick's architectural and AI-assisted development contribution without claiming to have personally written every line of code.
+Customer engagements use anonymised descriptions. The site avoids proprietary code and customer names, distinguishes ongoing pilots and proposals from delivered results, and describes Nick's architectural and AI-assisted development contribution without claiming to have personally written every line of code.
 
 ## Publish with Cloudflare Pages
 
@@ -36,4 +36,4 @@ Open the local URL printed by Astro. `npm run check` and `npm run build` are opt
 
 ## Editing
 
-Edit Markdown frontmatter and copy in `content/projects/`, or the two JSON files for skills and experience. `status` frontmatter is an editorial flag, not a publishing switch. All four stories currently appear on the site. The public site does not link to a personal GitHub profile.
+Edit Markdown frontmatter and copy in `content/projects/`, or the two JSON files for skills and experience. `featured` controls the five homepage cards; other projects appear under More work. `status` is an editorial flag, not a publishing switch. The public site does not link to a personal GitHub profile.

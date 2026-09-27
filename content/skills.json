@@ -4,17 +4,18 @@
     "items": [
       "MCP architecture",
       "REST APIs",
-      "Agentic AI solution design",
-      "AI-assisted development"
+      "AI-assisted development",
+      "Embeddings and search evaluation"
     ]
   },
   {
     "category": "Customer-facing engineering",
     "items": [
       "Technical discovery",
+      "As-is process mapping",
       "Solution architecture",
-      "Custom demonstrations",
-      "Enterprise delivery"
+      "Custom demonstrations and pilots",
+      "Technical assurance and NFR responses"
     ]
   },
   {
@@ -35,11 +36,20 @@
     ]
   },
   {
-    "category": "Programming",
+    "category": "Programming & data",
     "items": [
-      "JavaScript",
-      "TypeScript (learning)",
-      "Python (basic)"
+      "JavaScript and TypeScript - MCP tooling and AI-assisted application development",
+      "SQL and Postgres - schemas and Supabase-backed applications",
+      "Product data modelling - schemas, taxonomies and feed mappings"
+    ]
+  },
+  {
+    "category": "Integration & delivery",
+    "items": [
+      "API constraint and rate-limit analysis",
+      "Throughput and scale assessment",
+      "Scheduled cutover design",
+      "Middleware and iPaaS architecture"
     ]
   }
 ]

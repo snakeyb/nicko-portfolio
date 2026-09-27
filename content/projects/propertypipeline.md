@@ -3,7 +3,7 @@ title: PropertyPipeline
 organisation: PropertyPipeline
 category: SaaS & Product Engineering
 featured: true
-order: 2
+order: 4
 status: draft
 technologies: [SaaS, CRM, APIs, MCP]
 summary: Building and operating a specialist SaaS platform shaped by the day-to-day work of property investors.

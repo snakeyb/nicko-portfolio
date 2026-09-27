@@ -3,7 +3,7 @@ title: Enterprise Communications Delivery
 organisation: Previous consulting engagements
 category: Enterprise Architecture & Delivery
 featured: true
-order: 4
+order: 5
 status: draft
 technologies: [SIP, SBC, Microsoft Teams, Skype for Business]
 summary: Leading migrations and integrations where networks, legacy telephony and live operations all have to meet.
