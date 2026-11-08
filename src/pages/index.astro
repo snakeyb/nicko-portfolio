@@ -32,7 +32,7 @@ const more = projects.filter(project => !project.frontmatter.featured);
   <section id="work" class="wrap scroll-mt-12 py-24 md:py-32">
     <div class="mb-12 flex flex-col justify-between gap-5 md:flex-row md:items-end">
       <div><p class="eyebrow mb-5">01 / Selected work</p><h2 class="display text-5xl md:text-7xl">Built around<br />real problems.</h2></div>
-      <p class="max-w-sm leading-relaxed text-muted">Five examples across AI integration, customer data, independent product building and enterprise delivery. Each project shows the problem, my contribution and the approach.</p>
+      <p class="max-w-sm leading-relaxed text-muted">Explore some examples of my work across AI integration, customer data, independent product building and enterprise delivery.</p>
     </div>
     <div class="grid gap-4 md:grid-cols-2">{featured.map((project, index) => <ProjectCard slug={project.slug} data={project.frontmatter} index={index} wide={index === featured.length - 1 && featured.length % 2 === 1} />)}</div>
     {more.length > 0 && <div class="mt-12 border-t border-line pt-8"><p class="eyebrow mb-5">More work</p>{more.map(project => <a href={`/work/${project.slug}/`} class="group flex flex-col justify-between gap-3 border-b border-line py-5 transition-colors hover:text-accent sm:flex-row sm:items-center"><span class="text-xl font-semibold tracking-tight">{project.frontmatter.title}</span><span class="text-sm text-muted">{project.frontmatter.signal} <span aria-hidden="true" class="ml-3 text-accent">↗</span></span></a>)}</div>}
